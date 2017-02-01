@@ -14,7 +14,8 @@ The above will produce an add.bin object file.  Running this file through hexdum
 ```
 $ hexdump -C add.bin
 
-00000000  3e 05 06 07 80 76                                 |>....v|                      00000006 
+00000000  3e 05 06 07 80 76                                 |>....v|
+00000006 
 ```
 
 Run this bin through the VM like so:
