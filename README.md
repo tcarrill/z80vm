@@ -22,4 +22,13 @@ Run this bin through the VM like so:
 
 ```
 $ z80 add.bin
+
+Address  Opcode
+00000    3e
+00002    06
+00004    80
+00005    76
+
+Registers:
+A: 12   B: 7   C: 0   D: 0   E: 0   F: 0   H: 0   L: 0
 ```
