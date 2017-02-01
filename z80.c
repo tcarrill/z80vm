@@ -127,7 +127,6 @@ int main(int argc, char *argv[]) {
 		}	
 	}
 	print_registers();
-	printf("Result in memory: %i\n", vm.memory[65535]);
 
 	return 0;
 }
