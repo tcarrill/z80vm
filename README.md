@@ -1,11 +1,11 @@
 # z80vm
-A virtual machine based on a reduced set of the z80 ISA.
-The following registers, along with their instructions, will be implemented.
-**A**, **F**, **B**, **C**, **D**, **E**, **H** and **L** 
-As well as their 16-bit pairs
-**AF**, **BC**, **DE** and **HL**
-
-The following special purpose registers will also be implemented.
+A virtual machine based on a reduced set of the z80 ISA.</br>
+The following registers, along with their instructions, will be implemented.<br/>
+**A**, **F**, **B**, **C**, **D**, **E**, **H** and **L**<br/> 
+As well as their 16-bit pairs<br/>
+**AF**, **BC**, **DE** and **HL**<br/>
+<br/></br>
+The following special purpose registers will also be implemented.</br>
 **SP**, **PC**, **IX**, **IY** and **R** 
 
 ## Example
@@ -39,3 +39,6 @@ Address  Opcode
 Registers:
 A: 12   B: 7   C: 0   D: 0   E: 0   F: 0   H: 0   L: 0
 ```
+
+## Idiosyncrasies
+Currently, due to the lack of interrupts, the HALT instruction does not operate as documented by the Z80.  We use it as a way to halt execution and end the VM process.
