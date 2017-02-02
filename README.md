@@ -34,7 +34,6 @@ Run this binary through the VM like so:
 
 ```
 $ ./z80 add.bin
-
 Address  Opcode
 00000    3e
 00002    06
@@ -42,8 +41,8 @@ Address  Opcode
 00005    76
 
 Registers:
-A: 12   B: 7   C: 0   D: 0   E: 0   F: 0   H: 0   L: 0
+A: 12  B: 7   C: 0   D: 0   E: 0   F: 0   H: 0   L: 0
 ```
 
 ## Idiosyncrasies
-Currently, due to the lack of interrupts, the `HALT` (76h) instruction does not operate as documented by the Z80.  We use it as a way to halt execution and end the VM process.
+Currently, due to the lack of interrupts, the `HALT` (0x76) instruction does not operate as documented by the Z80.  We use it as a way to halt execution and end the VM process.
