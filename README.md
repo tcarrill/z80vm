@@ -1,5 +1,12 @@
 # z80vm
-A virtual machine based on a reduced set of the z80 ISA
+A virtual machine based on a reduced set of the z80 ISA.
+The following registers, along with their instructions, will be implemented.
+**A**, **F**, **B**, **C**, **D**, **E**, **H** and **L** 
+As well as their 16-bit pairs
+**AF**, **BC**, **DE** and **HL**
+
+The following special purpose registers will also be implemented.
+**SP**, **PC**, **IX**, **IY** and **R** 
 
 ## Example
 You can assemble the provided .asm files into object code which can then be run on the VM.
