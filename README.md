@@ -8,6 +8,12 @@ The following special purpose registers will also be implemented.</br>
 `SP`, `PC`, `IX`, `IY` and `R` 
 
 ## Example
+Compile the source using:
+
+```
+$ gcc -o z80 z80.c
+```
+
 You can assemble the provided .asm files into object code which can then be run on the VM.
 For example, using pasmo on linux:
 
@@ -15,7 +21,7 @@ For example, using pasmo on linux:
 $ pasmo --bin -v add.asm add.bin
 ```
 
-The above will produce an add.bin object file.  Running this file through hexdump will show us the machine code our VM reads and executes:
+The above will produce an add.bin binary.  Running this file through hexdump will show us the machine code our VM reads and executes:
 
 ```
 $ hexdump -C add.bin
@@ -24,10 +30,10 @@ $ hexdump -C add.bin
 00000006 
 ```
 
-Run this bin through the VM like so:
+Run this binary through the VM like so:
 
 ```
-$ z80 add.bin
+$ ./z80 add.bin
 
 Address  Opcode
 00000    3e
@@ -40,4 +46,4 @@ A: 12   B: 7   C: 0   D: 0   E: 0   F: 0   H: 0   L: 0
 ```
 
 ## Idiosyncrasies
-Currently, due to the lack of interrupts, the HALT instruction does not operate as documented by the Z80.  We use it as a way to halt execution and end the VM process.
+Currently, due to the lack of interrupts, the `HALT` (76h) instruction does not operate as documented by the Z80.  We use it as a way to halt execution and end the VM process.
