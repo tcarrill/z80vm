@@ -104,6 +104,7 @@ typedef struct VM {
 VM *init_vm();
 unsigned char fetch(VM *vm);
 void execute(VM *vm, unsigned char instr);
+int run(VM *vm);
 void print_registers(VM *vm);
 void free_vm(VM *vm);
 

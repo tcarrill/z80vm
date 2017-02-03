@@ -143,3 +143,16 @@ void print_registers(VM *vm) {
 	}
 	printf("\n");
 }
+
+int run(VM *vm) {
+	int running = 1;
+	while(running) {
+		unsigned char instr = fetch(vm);
+		if (instr == HALT) {
+			running = 0;
+		} else {
+			execute(vm, instr);
+		}
+	}
+	return 0;
+}
