@@ -11,7 +11,7 @@ The following special purpose registers will also be implemented.</br>
 Compile the source using:
 
 ```
-$ gcc -o z80 z80.c
+$ gcc -o z80 main.c z80.c
 ```
 
 You can assemble the provided .asm files into object code which can then be run on the VM.
