@@ -129,19 +129,6 @@ void execute(VM *vm, unsigned char instr) {
 	}
 }
 
-void readBinary(VM *vm, char *const filename) {
-    	FILE *fp = fopen(filename, "r");
-    
-	int nread;
-	unsigned char *program = vm->memory;   
-    	do {
-       	 	nread = fread(program, 1, 1, fp);
-        	program++;
-    	} while (nread > 0);
-
-	fclose(fp);
-}
-
 void print_registers(VM *vm) {
 	printf("\nRegisters\n");
 	char reg = 'A';
@@ -155,23 +142,4 @@ void print_registers(VM *vm) {
 		reg++;
 	}
 	printf("\n");
-}
-
-int main(int argc, char *argv[]) {
-	VM *vm = init_vm();
-	readBinary(vm, argv[1]);
-	printf("Address  Opcode\n");	
-	int running = 1;
-	while(running) {
-		unsigned char instr = fetch(vm);
-		printf("%05x    %02x\n", vm->pc - 1, instr);
-		if (instr == HALT) {
-			running = 0;
-		} else {				
-			execute(vm, instr);
-		}	
-	}
-	print_registers(vm);
-	free_vm(vm);
-	return 0;
 }
