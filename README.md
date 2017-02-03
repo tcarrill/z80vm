@@ -46,3 +46,10 @@ A: 12  B: 7   C: 0   D: 0   E: 0   F: 0   H: 0   L: 0
 
 ## Idiosyncrasies
 Currently, due to the lack of interrupts, the `HALT` (0x76) instruction does not operate as documented by the Z80.  We use it as a way to halt execution and end the VM process.
+
+## Tests
+Some rudimentary unit test functionality is included, compile the tests as follows:
+
+```
+$ gcc -o test test.c z80.c
+```
