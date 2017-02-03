@@ -26,7 +26,7 @@ int main(int argc, char *argv[]) {
 	unsigned char *program = NULL;
 	long length = readBinary(&program, argv[1]);
 	load_program(length, program, vm);
-	
+	free(program);
 	printf("Address  Opcode\n");
 	int running = 1;
 	while(running) {
@@ -39,6 +39,7 @@ int main(int argc, char *argv[]) {
 		}
 	}
 	print_registers(vm);
+		
 	free_vm(vm);
 	return 0;		
 }
