@@ -25,7 +25,6 @@ The above will produce an add.bin binary.  Running this file through hexdump wil
 
 ```
 $ hexdump -C add.bin
-
 00000000  3e 05 06 07 80 76                                 |>....v|
 00000006 
 ```
