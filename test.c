@@ -73,6 +73,7 @@ int testLoad() {
 	success = test(5, vm->r[L]);
 
 	free_vm(vm);
+	return success;
 }
 
 int testAdd() {
