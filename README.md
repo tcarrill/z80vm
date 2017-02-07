@@ -8,7 +8,7 @@ The following special purpose registers will also be implemented.</br>
 `SP`, `PC`, `IX`, `IY` and `R` 
 
 ## Example
-Compile the source using:
+Compile the source using the provided makefile or by typing the following:
 
 ```
 $ gcc -o z80 main.c z80.c
