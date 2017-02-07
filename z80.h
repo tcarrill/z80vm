@@ -81,8 +81,21 @@
 
 #define LD_MM_HL 0x22
 
+#define INC_A 0x3C
+#define DEC_A 0x3D
 #define INC_B 0x04
 #define DEC_B 0x05
+#define INC_C 0x0C
+#define DEC_C 0x0D
+#define INC_D 0x14
+#define DEC_D 0x15
+#define INC_E 0x1C
+#define DEC_E 0x1D
+#define INC_H 0x24
+#define DEC_H 0x25
+#define INC_L 0x2C
+#define DEC_L 0x2D
+
 #define ADD_A_B 0x80
 #define SUB_B 0x90
 #define AND_B 0xA0

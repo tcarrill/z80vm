@@ -82,11 +82,47 @@ void execute(VM *vm, unsigned char instr) {
 		case LD_L_N:
 			vm->r[L] = fetch(vm);
 			break;
+		case INC_A:
+			vm->r[A] += 1;
+			break;
+		case DEC_A:
+			vm->r[A] -= 1;
+			break;
 		case INC_B: 
 			vm->r[B] += 1; 
 			break;
 		case DEC_B: 
 			vm->r[B] -= 1; 
+			break;
+		case INC_C:
+			vm->r[C] += 1;
+			break;
+		case DEC_C:
+			vm->r[C] -= 1;
+			break;
+		case INC_D:
+			vm->r[D] += 1;
+			break;
+		case DEC_D:
+			vm->r[D] -= 1;
+			break;
+		case INC_E:
+			vm->r[E] += 1;
+			break;
+		case DEC_E:
+			vm->r[E] -= 1;
+			break;
+		case INC_H:
+			vm->r[H] += 1;
+			break;
+		case DEC_H:
+			vm->r[H] -= 1;
+			break;
+		case INC_L:
+			vm->r[L] += 1;
+			break;
+		case DEC_L:
+			vm->r[L] -= 1;
 			break;
 		case LD_A_A:
 			break;
