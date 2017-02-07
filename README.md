@@ -40,7 +40,8 @@ Address  Opcode
 00005    76
 
 Registers:
-A: 12  B: 7   C: 0   D: 0   E: 0   F: 0   H: 0   L: 0
+A    BC    DE    HL    IX    IY    SP
+0c  0700  0000  0000  0000  0000  0000
 ```
 
 ## Idiosyncrasies
