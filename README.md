@@ -51,5 +51,9 @@ Currently, due to the lack of interrupts, the `HALT` (0x76) instruction does not
 Some rudimentary unit test functionality is included, compile the tests as follows:
 
 ```
+$ make test
+```
+Or
+```
 $ gcc -o test test.c z80.c
 ```
