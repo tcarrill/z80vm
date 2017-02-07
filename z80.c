@@ -125,23 +125,26 @@ void execute(VM *vm, unsigned char instr) {
 			break;
 		case LD_NN_A:
 			load_memory(vm, vm->r[A]);
-			break; 
+			break;
+		case LD_BC_NN:
+			vm->r[C] = fetch(vm);
+			vm->r[B] = fetch(vm);
+			break;
+		case LD_DE_NN:
+			vm->r[E] = fetch(vm);
+			vm->r[D] = fetch(vm);
+			break;
+		case LD_HL_NN:
+			vm->r[L] = fetch(vm);
+			vm->r[H] = fetch(vm);
+			break;
 	}
 }
 
 void print_registers(VM *vm) {
 	printf("\nRegisters\n");
-	char reg = 'A';
-	for (int i = 0; i < 8; i++) {
-		if (i == 6) {
-			reg = 'H';
-		} else if (i == 7) {
-			reg = 'L';
-		}
-		printf("%c: %d\t", reg, vm->r[i]);
-		reg++;
-	}
-	printf("\n");
+	printf("A    BC    DE    HL    IX    IY    SP\n");
+	printf("%02x  %02x%02x  %02x%02x  %02x%02x  %04x  %04x  %04x\n", vm->r[A], vm->r[B], vm->r[C], vm->r[D], vm->r[E], vm->r[H], vm->r[L], vm->ix, vm->iy, vm->sp);
 }
 
 int run(VM *vm) {

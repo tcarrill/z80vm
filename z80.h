@@ -5,7 +5,12 @@
 #include <stdlib.h>
 
 #define MEM_SIZE 65536
+
 #define NOP 0x00
+#define LD_BC_NN 0x01
+#define LD_DE_NN 0x11
+#define LD_HL_NN 0x21
+#define LD_SP_NN 0x31
 
 //Load register operations
 #define LD_A_N 0x3E
@@ -73,6 +78,8 @@
 #define LD_L_L 0x6D
 
 #define LD_NN_A 0x32
+
+#define LD_MM_HL 0x22
 
 #define INC_B 0x04
 #define DEC_B 0x05
