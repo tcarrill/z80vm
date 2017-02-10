@@ -2,10 +2,10 @@
 A virtual machine based on a reduced set of the z80 ISA.</br>
 <br/>
 The following registers, along with their instructions, will be implemented.<br/>
-`A`, `F`, `B`, `C`, `D`, `E`, `H` and `L` as well as their 16-bit pairs `AF`, `BC`, `DE` and `HL`<br/>
+`A`, `F`, `B`, `C`, `D`, `E`, `H`, and `L` as well as their 16-bit pairs `BC`, `DE`, and `HL`<br/>
 </br>
 The following special purpose registers will also be implemented.</br>
-`SP`, `PC`, `IX`, `IY` and `R` 
+`SP`, `PC`, `IX`, `IY`, and `R` 
 
 ## Example
 Compile the source using the provided makefile or by typing the following:
