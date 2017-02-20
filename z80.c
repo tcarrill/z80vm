@@ -24,7 +24,7 @@ void free_vm(VM *vm) {
 }
 
 unsigned char fetch(VM *vm) {
-	if (vm->pc == MEM_SIZE) {
+	if (vm->pc == MEM_SIZE - 1) {
 		vm->pc = 0;
 	}
 	return vm->memory[vm->pc++];
