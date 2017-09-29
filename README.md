@@ -15,7 +15,7 @@ $ gcc -o z80 main.c z80.c
 ```
 
 You can assemble the provided .asm files into object code which can then be run on the VM.
-For example, using pasmo on linux:
+For example, using pasmo on Linux:
 
 ```
 $ pasmo --bin -v add.asm add.bin
